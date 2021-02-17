@@ -64,7 +64,8 @@ li a {
 /*Media Queries*/
 @media only screen and (max-width: 980px) {
 	h1#title {
-		display:none;
+	  color: darkred;
+	  text-shadow: none;
 	}
 	
 	table#BestEast {
