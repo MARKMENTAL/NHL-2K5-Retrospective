@@ -1,0 +1,174 @@
+@charset "utf-8";
+html {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;
+}
+body {
+	background: radial-gradient(circle, rgba(255,255,255,1) 43%, rgba(241,241,241,1) 56%, rgba(232,232,232,1) 63%);
+	;
+	max-width: 1200px;
+	min-width: 420px;
+	margin: 40px auto;
+	border: 3px solid black;
+	padding: 40px;
+}
+/* Header Styles */
+body > header {
+	background-color: darkred;
+}
+/*ESPN NHL 2K5 logo*/
+img#NHL {
+	width: 12%;
+	float: left;
+	box-shadow: 10px 10px 15px black;
+	border: 10px solid black;
+}
+/* header 1 Title ESPN NHL 2K5 Retrospective*/
+h1#title {
+	color: white;
+	font-size: 30px;
+	padding-right: 2px;
+	padding-left:460px;
+	padding-top: 10px;
+	margin: -10px;
+	text-shadow: black 2px 2px 2px;
+}
+p#subtitle{
+	color:white;
+	font-size: 15px;
+	padding-bottom: 15px;
+	padding-right: 2px;
+	padding-left:28px;
+	text-shadow: black 3px 3px 10px;
+	text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  padding: 8px;
+  background-color: whitesmoke;
+  color: darkred;
+}
+
+/*Media Queries*/
+@media only screen and (max-width: 980px) {
+	h1#title {
+		color: darkred;
+		text-shadow: none;
+	}
+}
+/* Section Styles: Code that is inserted from JavaScript */
+img#westernlogo {
+	height: 12px;
+	float: right;
+	border-bottom: navy solid 2px;
+	padding: 3px;
+}
+img#easternlogo {
+	height: 12px;
+	float: right;
+	border-bottom: darkred solid 2px;
+	padding: 3px;
+}
+section {
+	-webkit-flex: 1 1 500px;
+	flex: 1 1 500px;
+	padding-left: 30px;
+	padding-bottom: 10px;
+}
+section > h1 {
+	font-size: 3em;
+	letter-spacing: 0.12em;
+	line-height: 1.4em;
+	font-weight: normal;
+	font-family:monospace;
+	margin: 10px 0px 20px 0px;
+	text-align: right;
+}
+section table {
+	margin: 10px 0px 5px 0px;
+}
+section table caption {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-size: 1.9em;
+	font-weight: bold;
+	letter-spacing: 0.08em;
+	margin-bottom: 10px;
+}
+section table tr:first-of-type th:last-of-type {
+	text-align: right;
+}
+section table tr td:first-of-type {
+	width: 120px;
+}
+section table tr td:nth-of-type(3) {
+	width: 150px;
+	text-align: left;
+	padding-right: 7px;
+}
+/*Eastern and Western bars are made with table data elements*/
+td.Eastern {
+	background-color: red;
+	padding:3px;
+}
+td.Western {
+	background-color: navy;
+	padding: 3px;
+}
+table#BestEast {
+	background-image: url(easternlogo.png);
+	background-size: 1px,1px;
+	border: black solid 5px;
+	padding: 6px;
+	font-size: 14px;
+        position: absolute;
+	left: 1400px;
+}
+table#BestWest {
+	background-image: url(westernlogo.png);
+	background-size: 1px,1px;
+	border: black solid 5px;
+	padding: 8px;
+	font-size: 14px;
+}
+/* Footer Styles */
+footer {
+	width: 100%;
+}
+footer p {
+	color: white;
+	font-size: 1.5em;
+	text-align: center;
+	background-color: darkred;
+	margin: -10px;
+	padding: 18px;
+}
+img#tux {
+	display: inline;
+	width: 40px;
+	height:40px;
+	float:center;
+	margin-bottom: -10px;
+}
+img#firefox {
+	display: inline;
+	width: 40px;
+	height:40px;
+	float:center;
+	margin-bottom: -10px;
+}
+p#disclosure{
+	font-size: 0.8em;
+}
+
