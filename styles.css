@@ -64,9 +64,19 @@ li a {
 /*Media Queries*/
 @media only screen and (max-width: 980px) {
 	h1#title {
-		color: darkred;
-		text-shadow: none;
+		display:none;
 	}
+	
+	table#BestEast {
+    background-color: darkred;
+    background-size: 1px,1px;
+    border: black solid 5px;
+    padding: 6px;
+    font-size: 14px;
+    position: relative;
+    float: right;
+}
+
 }
 /* Section Styles: Code that is inserted from JavaScript */
 img#westernlogo {
@@ -127,16 +137,18 @@ td.Western {
 	padding: 3px;
 }
 table#BestEast {
-	background-image: url(easternlogo.png);
+	background-color: silver;
+	color: darkred;
 	background-size: 1px,1px;
 	border: black solid 5px;
 	padding: 6px;
 	font-size: 14px;
-        position: absolute;
-	left: 1400px;
+  position: relative;
+  float: right;
 }
 table#BestWest {
-	background-image: url(westernlogo.png);
+	background-color: silver;
+	color: navy;
 	background-size: 1px,1px;
 	border: black solid 5px;
 	padding: 8px;
