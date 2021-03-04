@@ -29,13 +29,15 @@ function calcSumLoss(value) {
 
 function teamRows(divisionNum, totalWins, totalLosses) {
     var rowHTML = '';
-    rowHTML += "<table>" + "<caption>" + division[i] + "</caption>" + "<tr><th>Team</th><th> W/L </th>";
-    rowHTML += "<th> Visual  </th></tr>";
+    rowHTML += "<table>" + "<caption>" + division[i] + "</caption>" + "<tr><th>Team</th><th> W </th>";
+    rowHTML += "<th> L </th>" + "<th> T </th>" + "<th> OTL </th>" +"</tr>";
     for (var j = 0; j < 5; j++) {
         var teamName = team[divisionNum][j];
         var teamConference = conference[divisionNum][j];
         var teamWins = wins[divisionNum][j];
         var teamLosses = losses[divisionNum][j];
+        var teamTies = ties[divisionNum][j];
+        var teamOTL = overtimeL[divisionNum][j];
 		// adds color to the team that is player-controlled
         	if (teamName == "Ottawa Senators"){
 			rowHTML += '<tr>' + '<td style= "color: darkred;"> <b>' + teamName + '</b></td>';
@@ -45,13 +47,16 @@ function teamRows(divisionNum, totalWins, totalLosses) {
 		}
         rowHTML += '<td>' + teamWins.toLocaleString() + '</td>';
         rowHTML += '<td>' + teamLosses.toLocaleString() + '</td>';
+        rowHTML += '<td>' + teamTies.toLocaleString() + '</td>';
+        rowHTML += '<td>' + teamOTL.toLocaleString() + '</td>';
+        
         for (var k = 0; k < teamWins; k++) {
-            rowHTML += createBar(teamConference, totalWins);
+            rowHTML += createBar(teamConference);
         }
         rowHTML += '</tr>';
         var divisionleader = team[divisionNum][0];
     }
-    rowHTML += '<tr> <td><b> Division leader is: ' + divisionleader + '</td> </b></tr>'
+    rowHTML += '<tr> <td><b> Division leader is: ' + divisionleader + '</td> </b></tr>';
     return rowHTML;
 }
 
@@ -63,22 +68,22 @@ function createBar(confType) {
 
     switch (confType) {
         case "Eastern":
-            barHTML = "<img src ='easternlogo.png' id ='easternlogo' ><td class='Eastern'></td>";
+            barHTML = "<img src ='https://nfl2k3fantasyseasons.neocities.org/easternlogo.png' id ='easternlogo' ><td class='Eastern'></td>";
             return barHTML;
         case "Western":
-            barHTML = "<img src ='westernlogo.png' id ='westernlogo' ><td class='Western'></td>";
+            barHTML = "<img src ='https://nfl2k3fantasyseasons.neocities.org/westernlogo.png' id ='westernlogo' ><td class='Western'></td>";
             return barHTML;
     }
 }
-//function gets ProBowlQB info from NFLInfo.js and shows as html
+//function shows Conference leaders in table boxes
 function ConferenceBest() {
     var proHTML = "";
     proHTML += "<table id ='BestEast'>" + "<caption> Eastern Conference Leader </caption>";
     proHTML += "<tr><th style = 'text-align:center;'> Team</th></tr>";
-    proHTML += "<tr><td>" + "New York Rangers" + "</td>" + "</tr> </table>";
+    proHTML += "<tr><td>" + team[1][0] + "</td>" + "</tr> </table>";
     proHTML += "<table id ='BestWest'>" + "<caption> Western Conference Leader </caption>";
     proHTML += "<tr><th style = 'text-align:center;'> Team</th></tr>";
-    proHTML += "<tr><td>" + "Los Angeles Kings" + "</td>" + "</tr>";
+    proHTML += "<tr><td>" + team[5][0] + "</td>" + "</tr>";
     return proHTML;
 }
 
