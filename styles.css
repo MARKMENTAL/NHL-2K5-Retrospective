@@ -4,10 +4,8 @@ html {
 	font-size: 11px;
 }
 body {
-	background: radial-gradient(circle, rgba(255,255,255,1) 43%, rgba(241,241,241,1) 56%, rgba(232,232,232,1) 63%);
-	;
+	background: radial-gradient(circle, rgba(255,255,255,1) 43%, rgba(241,241,241,1) 56%, rgba(232,232,232,1) 63%);;
 	max-width: 1200px;
-	min-width: 420px;
 	margin: 40px auto;
 	border: 3px solid black;
 	padding: 40px;
@@ -48,6 +46,8 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  position: relative;
+  right: 440px;
 }
 
 li {
@@ -78,19 +78,26 @@ li a {
     float: right;
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    right: 200px;
+}
+
 }
 /* Section Styles: Code that is inserted from JavaScript */
 img#westernlogo {
-	height: 12px;
+	height: 1px;
 	float: right;
-	border-bottom: navy solid 2px;
-	padding: 3px;
+	border-bottom: navy solid 20px;
 }
 img#easternlogo {
-	height: 12px;
+	height: 1px;
 	float: right;
-	border-bottom: darkred solid 2px;
-	padding: 3px;
+	border-bottom: darkred solid 20px;
 }
 section {
 	-webkit-flex: 1 1 500px;
@@ -105,7 +112,7 @@ section > h1 {
 	font-weight: normal;
 	font-family:monospace;
 	margin: 10px 0px 20px 0px;
-	text-align: right;
+	text-align: center;
 }
 section table {
 	margin: 10px 0px 5px 0px;
@@ -117,25 +124,48 @@ section table caption {
 	letter-spacing: 0.08em;
 	margin-bottom: 10px;
 }
-section table tr:first-of-type th:last-of-type {
-	text-align: right;
+
+section table th:nth-of-type(2) {
+    position: relative;
+    right: -2px;
+}
+section table th:nth-of-type(3) {
+    position: relative;
+    right: -2px;
+}
+section table th:nth-of-type(4) {
+    position: relative;
+    right: -2px;
+}
+section table th:nth-of-type(5) {
+    position: relative;
+    right: -2px;
+}
+section table th:nth-of-type(6) {
+    position: relative;
+    right: -40px;
+}
+tr {
+    text-align: center;
+}
+th {
+    border-bottom: black solid 2px;
+		width: 20px;
 }
 section table tr td:first-of-type {
 	width: 120px;
 }
-section table tr td:nth-of-type(3) {
-	width: 150px;
-	text-align: left;
-	padding-right: 7px;
-}
+
 /*Eastern and Western bars are made with table data elements*/
 td.Eastern {
 	background-color: red;
-	padding:3px;
+	position: relative;
+	left: 40px;
 }
 td.Western {
 	background-color: navy;
-	padding: 3px;
+	position: relative;
+	left: 40px;
 }
 table#BestEast {
 	background-color: silver;
@@ -152,7 +182,6 @@ table#BestWest {
 	color: navy;
 	background-size: 1px,1px;
 	border: black solid 5px;
-	padding: 8px;
 	font-size: 14px;
 }
 /* Footer Styles */
@@ -171,14 +200,12 @@ img#tux {
 	display: inline;
 	width: 40px;
 	height:40px;
-	float:center;
 	margin-bottom: -10px;
 }
 img#firefox {
 	display: inline;
 	width: 40px;
 	height:40px;
-	float:center;
 	margin-bottom: -10px;
 }
 p#disclosure{
