@@ -72,7 +72,6 @@ li a {
     background-color: darkred;
     background-size: 1px,1px;
     border: black solid 5px;
-    padding: 6px;
     font-size: 14px;
     position: relative;
     float: right;
@@ -172,7 +171,6 @@ table#BestEast {
 	color: darkred;
 	background-size: 1px,1px;
 	border: black solid 5px;
-	padding: 6px;
 	font-size: 14px;
   position: relative;
   float: right;
@@ -187,6 +185,7 @@ table#BestWest {
 /* Footer Styles */
 footer {
 	width: 100%;
+	padding-top: 20px;
 }
 footer p {
 	color: white;
